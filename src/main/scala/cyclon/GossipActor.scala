@@ -1,44 +1,36 @@
 package cyclon
 
-import java.io.File
-
 import akka.actor._
-import com.typesafe.config.ConfigFactory
-import cyclon.LocalActor.{Neighbor, getNeighbors}
+import cyclon.LocalActor.{Neighbor, GetNeighbors}
 
 import scala.concurrent.duration._
 import scala.util.Random
 
-class Message(var m: List[ActorPath] ) extends Serializable
-
-class Pending(val m: Message, val sender: ActorRef ) extends Serializable
-/**
- * Remote actor which listens on port 5150
- */
 class GossipActor(fanout: Int, cyclon: ActorRef) extends Actor {
 
   import GossipActor._
   import context.dispatcher
 
-  var delivered = List[Message]()
-  var pending = List[Pending]()
-  var neighs = List[Neighbor]()
+  var delivered: List[Message] = List[Message]()
+  var pending: List[Pending] = List[Pending]()
+  var neighs: List[Neighbor] = List[Neighbor]()
 
-  val cancellable =
+  val cancellable: Cancellable =
     context.system.scheduler.schedule(
       0 milliseconds,
       10000 milliseconds,
       self,
       AntiEntropy)
 
-  override def receive = {
+  override def receive: Unit = {
+
     case rBroadcast (m) =>
-      val mess = new Message( m)
+      val mess = new Message(m)
       val pend = new Pending(mess,self)
       //upper ! deliver
       delivered ::= mess
       pending ::= pend
-      cyclon ! getNeighbors
+      cyclon ! GetNeighbors
 
     case Neighbors(n) =>
       neighs = n
@@ -56,11 +48,12 @@ class GossipActor(fanout: Int, cyclon: ActorRef) extends Actor {
           delivered ::= m
           //upper ! deliver
           pending ::= new Pending(m, sender())
-          cyclon ! getNeighbors
+          cyclon ! GetNeighbors
         }
       }
+
     case AntiEntropy =>
-      if(!neighs.isEmpty){
+      if(neighs.nonEmpty){
         val n = Random.shuffle(neighs).take(1).head
         n.actor ! ReceiveAnti("AntiEntropyMsg", delivered)
       }
@@ -74,10 +67,15 @@ class GossipActor(fanout: Int, cyclon: ActorRef) extends Actor {
 }
 
 object GossipActor{
+
+  class Message(var m: List[Neighbor] ) extends Serializable
+  class Pending(val m: Message, val sender: ActorRef ) extends Serializable
+
   def props(fanout: Int, cyclon: ActorRef): Props =
     Props(new GossipActor(fanout, cyclon))
+
   case object AntiEntropy
-  final case class rBroadcast(m:List[ActorPath])
+  final case class rBroadcast(m:List[Neighbor])
   final case class Neighbors(n:List[Neighbor])
   final case class Receive(typ: String, m: Message)
   final case class ReceiveAnti(typ: String, d: List[Message])

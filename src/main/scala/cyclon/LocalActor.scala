@@ -2,7 +2,7 @@ package cyclon
 
 import java.io.File
 
-import akka.actor.{Actor, ActorRef, ActorSelection, ActorSystem, Props}
+import akka.actor.{Actor, ActorSelection, ActorSystem, Props}
 import com.typesafe.config.ConfigFactory
 import cyclon.GossipActor.Neighbors
 
@@ -81,9 +81,8 @@ class LocalActor(ip:String, port: String, name: String, maxN: Int) extends Actor
 
   override def receive = {
 
-    case getNeighbors =>
-      var pview = neighs;
-      sender() ! Neighbors( pview )
+    case GetNeighbors =>
+      sender() ! Neighbors( neighs )
 
     case Shuffle() =>
       if(!neighs.isEmpty) {
@@ -96,8 +95,7 @@ class LocalActor(ip:String, port: String, name: String, maxN: Int) extends Actor
         neighs = neighs.filter(!_.actor.pathString.equals(oldest.actor.pathString))
         sample = Random.shuffle(neighs).take(2)
         val myself = new Neighbor(context.actorSelection(self.path),0)
-        //Send)
-        val tmp = myself :: sample
+
         oldest.actor ! Receive("shuffleRequest", myself :: sample)
       }
 
@@ -126,15 +124,15 @@ class LocalActor(ip:String, port: String, name: String, maxN: Int) extends Actor
 object LocalActor {
 
   class Neighbor(val actor: ActorSelection, var age: Int ) extends Serializable
+
   final case class Shuffle()
-  case object getNeighbors
+  case object GetNeighbors
   final case class Receive(request: String, peerSample: List[Neighbor])
 
   def props(ip:String, port: String, name: String, maxN: Int): Props =
     Props(new LocalActor(ip,port,name, maxN))
 
   def main(args: Array[String]) {
-
 
     println("Indicar vizinho conhecido")
     val ip = readLine("IP: ")
@@ -148,6 +146,7 @@ object LocalActor {
 
     val gossipActor = system.actorOf(GossipActor.props(fanout = 4, cyclonActor))
 
+    
   }
 
 
