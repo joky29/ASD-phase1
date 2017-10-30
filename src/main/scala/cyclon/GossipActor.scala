@@ -1,7 +1,8 @@
 package cyclon
 
 import akka.actor._
-import cyclon.LocalActor.{Neighbor, GetNeighbors}
+import cyclon.GlobalActor.ReceiveGlobal
+import cyclon.LocalActor.{GetNeighbors, Neighbor}
 
 import scala.concurrent.duration._
 import scala.util.Random
@@ -14,20 +15,22 @@ class GossipActor(fanout: Int, cyclon: ActorRef) extends Actor {
   var delivered: List[Message] = List[Message]()
   var pending: List[Pending] = List[Pending]()
   var neighs: List[Neighbor] = List[Neighbor]()
+  var global: ActorRef = null
 
   val cancellable: Cancellable =
     context.system.scheduler.schedule(
       0 milliseconds,
-      10000 milliseconds,
+      5000 milliseconds,
       self,
       AntiEntropy)
 
-  override def receive: Unit = {
+  override def receive = {
 
-    case rBroadcast (m) =>
-      val mess = new Message(m)
+    case rBroadcast () =>
+      val mess = new Message(neighs)
       val pend = new Pending(mess,self)
-      //upper ! deliver
+      global = sender()
+      global ! ReceiveGlobal(neighs)
       delivered ::= mess
       pending ::= pend
       cyclon ! GetNeighbors
@@ -35,18 +38,22 @@ class GossipActor(fanout: Int, cyclon: ActorRef) extends Actor {
     case Neighbors(n) =>
       neighs = n
       for(p <- pending){
-        val tmp = n.filter(!_.actor.pathString.equals(p.sender.path.toString))
-        val gossipTargets = Random.shuffle(tmp).take(fanout)
+        //val tmp = n.filter(!_.actor.pathString.equals(p.sender.path.toString))
+        val gossipTargets = Random.shuffle(neighs).take(fanout)
         for(g <- gossipTargets)
           g.actor ! Receive("GossipMessage", p.m)
       }
       pending = List[Pending]()
+      println()
+      neighs.foreach(l => println("GossipNeighs",l.actor.pathString))
+      println()
 
     case Receive(typ, m) =>
+      //println("GossipNeighs", m.m.foreach(l => l.actor.pathString))
       if(typ.equals("GossipMessage")){
         if(!delivered.contains(m)){
           delivered ::= m
-          //upper ! deliver
+          global ! ReceiveGlobal(m.m)
           pending ::= new Pending(m, sender())
           cyclon ! GetNeighbors
         }
@@ -75,7 +82,7 @@ object GossipActor{
     Props(new GossipActor(fanout, cyclon))
 
   case object AntiEntropy
-  final case class rBroadcast(m:List[Neighbor])
+  final case class rBroadcast()
   final case class Neighbors(n:List[Neighbor])
   final case class Receive(typ: String, m: Message)
   final case class ReceiveAnti(typ: String, d: List[Message])

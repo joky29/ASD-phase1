@@ -2,9 +2,11 @@ package cyclon
 
 import java.io.File
 
-import akka.actor.{Actor, ActorSelection, ActorSystem, Props}
+import akka.actor.{Actor, ActorSelection, ActorSystem, ExtendedActorSystem, Props}
 import com.typesafe.config.ConfigFactory
 import cyclon.GossipActor.Neighbors
+import cyclon.TestActor.TestNeighbors
+//import cyclon.GossipActor.Neighbors
 
 import scala.concurrent.duration._
 import scala.util.Random
@@ -26,11 +28,12 @@ class LocalActor(ip:String, port: String, name: String, maxN: Int) extends Actor
       Shuffle())
 
   override def preStart(): Unit = {
-    if(!ip.equals("")) {
+    if(!port.equals("")) {
+      println("AQUIIII")
       val contact = context.system.actorSelection("akka.tcp://CyclonSystem@" + ip + ":" + port + "/user/" + name)
       println("That 's remote:" + contact)
       val contactF = new Neighbor(contact, 0)
-      neighs ::= contactF
+      neighs = contactF :: neighs
     }
   }
 
@@ -39,7 +42,7 @@ class LocalActor(ip:String, port: String, name: String, maxN: Int) extends Actor
       if(n.actor.pathString.equals(peer.actor.pathString))
         return true
     })
-    false
+    return false
   }
 
   def mergeViews(peerSample: List[Neighbor], mySample: List[Neighbor]): Unit ={
@@ -61,7 +64,7 @@ class LocalActor(ip:String, port: String, name: String, maxN: Int) extends Actor
           if (neighs.containsSlice(peerSample)) {
             var done = false
             for (n <- neighs; if !done) {
-              if (peerSample.contains(n)) {
+              if (mySample.contains(n)) {
                 x = n
                 done = true
               }
@@ -84,6 +87,9 @@ class LocalActor(ip:String, port: String, name: String, maxN: Int) extends Actor
     case GetNeighbors =>
       sender() ! Neighbors( neighs )
 
+    case TestGetNeighborsCyclon =>
+      sender() ! TestNeighbors( neighs )
+
     case Shuffle() =>
       if(!neighs.isEmpty) {
         var oldest:Neighbor = new Neighbor(null, -1000)
@@ -92,7 +98,7 @@ class LocalActor(ip:String, port: String, name: String, maxN: Int) extends Actor
           if(oldest.age < neigh.age)
             oldest = neigh
         }
-        neighs = neighs.filter(!_.actor.pathString.equals(oldest.actor.pathString))
+        //neighs = neighs.filter(!_.actor.pathString.equals(oldest.actor.pathString))
         sample = Random.shuffle(neighs).take(2)
         val myself = new Neighbor(context.actorSelection(self.path),0)
 
@@ -112,11 +118,6 @@ class LocalActor(ip:String, port: String, name: String, maxN: Int) extends Actor
       else if(request.equals("shuffleReply")){
         mergeViews(peerSample, sample)
       }
-      /*print("neighs after shuffle: ")
-      println(neighs.size)
-      for (neigh <- neighs) {
-        println(neigh.actor.pathString)
-      }*/
   }
 }
 
@@ -127,6 +128,7 @@ object LocalActor {
 
   final case class Shuffle()
   case object GetNeighbors
+  case object TestGetNeighborsCyclon
   final case class Receive(request: String, peerSample: List[Neighbor])
 
   def props(ip:String, port: String, name: String, maxN: Int): Props =
@@ -135,18 +137,20 @@ object LocalActor {
   def main(args: Array[String]) {
 
     println("Indicar vizinho conhecido")
-    val ip = readLine("IP: ")
+    //val ip = readLine("IP: ")
     val port = readLine("Porta: ")
-    val name = readLine("Nome: ")
-    val myname = "local"
+    //val name = readLine("Nome: ")
+
     val configFile = getClass.getClassLoader.getResource("local_application.conf").getFile
     val config = ConfigFactory.parseFile(new File(configFile))
     val system = ActorSystem("CyclonSystem",config)
-    val cyclonActor = system.actorOf(LocalActor.props(ip, port, name, 4), myname)
+    val myname = "Actor" + system.asInstanceOf[ExtendedActorSystem].provider.getDefaultAddress.port.get
 
+
+    val cyclonActor = system.actorOf(LocalActor.props("127.0.0.1", port, "Actor"+port , 3), myname)
     val gossipActor = system.actorOf(GossipActor.props(fanout = 4, cyclonActor))
-
-    
+    val globalActor = system.actorOf(GlobalActor.props(gossipActor))
+    val testActor = system.actorOf(TestActor.props(cyclonActor))
   }
 
 
