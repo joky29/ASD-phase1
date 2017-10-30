@@ -3,6 +3,7 @@ package cyclon
 import akka.actor._
 import cyclon.GlobalActor.ReceiveGlobal
 import cyclon.LocalActor.{GetNeighbors, Neighbor}
+import cyclon.TestActor.TestDelivered
 
 import scala.concurrent.duration._
 import scala.util.Random
@@ -27,12 +28,15 @@ class GossipActor(fanout: Int, cyclon: ActorRef) extends Actor {
   override def receive = {
 
     case rBroadcast () =>
-      val mess = new Message(neighs)
-      val pend = new Pending(mess,self)
-      global = sender()
-      global ! ReceiveGlobal(neighs)
-      delivered ::= mess
-      pending ::= pend
+      if(neighs.nonEmpty) {
+        val myself = new Neighbor(context.actorSelection(self.path),0)
+        val mess = new Message(myself :: neighs)
+        val pend = new Pending(mess, self)
+        global = sender()
+        global ! ReceiveGlobal(neighs)
+        delivered ::= mess
+        pending ::= pend
+      }
       cyclon ! GetNeighbors
 
     case Neighbors(n) =>
@@ -44,12 +48,8 @@ class GossipActor(fanout: Int, cyclon: ActorRef) extends Actor {
           g.actor ! Receive("GossipMessage", p.m)
       }
       pending = List[Pending]()
-      println()
-      neighs.foreach(l => println("GossipNeighs",l.actor.pathString))
-      println()
 
     case Receive(typ, m) =>
-      //println("GossipNeighs", m.m.foreach(l => l.actor.pathString))
       if(typ.equals("GossipMessage")){
         if(!delivered.contains(m)){
           delivered ::= m
@@ -70,6 +70,9 @@ class GossipActor(fanout: Int, cyclon: ActorRef) extends Actor {
         if(!knownMessages.contains(d))
           sender() ! Receive("GossipMessage", d)
       }
+
+    case GetDelivered =>
+      sender() ! TestDelivered(delivered)
   }
 }
 
@@ -82,6 +85,7 @@ object GossipActor{
     Props(new GossipActor(fanout, cyclon))
 
   case object AntiEntropy
+  case object GetDelivered
   final case class rBroadcast()
   final case class Neighbors(n:List[Neighbor])
   final case class Receive(typ: String, m: Message)

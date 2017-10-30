@@ -2,37 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee705aa1-da23-4d56-86be-37867b7f2603" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/cyclon/GlobalActor.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/cyclon/TestActor.scala" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$10cc369801b10201d204$$anonfun$$sbtdef$1$$anonfun$apply$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$10cc369801b10201d204$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$10cc369801b10201d204$$anonfun$$sbtdef$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$10cc369801b10201d204$$anonfun$$sbtdef$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$10cc369801b10201d204$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$10cc369801b10201d204.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$10cc369801b10201d204.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$2a03277cd09433ed31c2$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$2a03277cd09433ed31c2.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$2a03277cd09433ed31c2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$2e491814695cbe3f6fdd$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$2e491814695cbe3f6fdd$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$2e491814695cbe3f6fdd.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$2e491814695cbe3f6fdd.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$2f4a317f92e236e25bec$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$2f4a317f92e236e25bec$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$2f4a317f92e236e25bec.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$2f4a317f92e236e25bec.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$727c5b747de08e182021$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$727c5b747de08e182021$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$727c5b747de08e182021.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$727c5b747de08e182021.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$fe4687717d8f2f8bbd87$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$fe4687717d8f2f8bbd87$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$fe4687717d8f2f8bbd87.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$fe4687717d8f2f8bbd87.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/Message.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/Pending.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.10/output" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.10/output" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/remote_application.conf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/scala/com/lightbend/akka/sample/AkkaQuickstartSpec.scala" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/remote_application.conf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/test-classes/com/lightbend/akka/sample/AkkaQuickstartSpec.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/GossipActor$$anonfun$receive$1.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/GossipActor$$anonfun$receive$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/GossipActor$.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/GossipActor$.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/GossipActor$AntiEntropy$.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/GossipActor$AntiEntropy$.class" />
@@ -44,42 +17,21 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/GossipActor$ReceiveAnti.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/GossipActor$ReceiveAnti.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/GossipActor$rBroadcast$.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/GossipActor$rBroadcast$.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/GossipActor$rBroadcast.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/GossipActor$rBroadcast.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/GossipActor.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/GossipActor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/LocalActor$$anonfun$receive$1.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/LocalActor$$anonfun$receive$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/LocalActor$.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/LocalActor$.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/LocalActor$Neighbor.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/LocalActor$Neighbor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/LocalActor$Receive$.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/LocalActor$Receive$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/LocalActor$Receive.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/LocalActor$Receive.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/LocalActor$Shuffle$.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/LocalActor$Shuffle$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/LocalActor$Shuffle.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/LocalActor$Shuffle.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/LocalActor$getNeighbors$.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/LocalActor$getNeighbors$.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/LocalActor.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/LocalActor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/default/akka-quickstart-scala-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" afterPath="$PROJECT_DIR$/project/target/resolution-cache/default/akka-quickstart-scala-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/default/akka-quickstart-scala-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/default/akka-quickstart-scala-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-akka-quickstart-scala-build-compile-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-akka-quickstart-scala-build-compile-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-akka-quickstart-scala-build-compile.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-akka-quickstart-scala-build-compile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-akka-quickstart-scala-build-docs.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-akka-quickstart-scala-build-docs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-akka-quickstart-scala-build-optional.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-akka-quickstart-scala-build-optional.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-akka-quickstart-scala-build-plugin.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-akka-quickstart-scala-build-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-akka-quickstart-scala-build-pom.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-akka-quickstart-scala-build-pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-akka-quickstart-scala-build-provided.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-akka-quickstart-scala-build-provided.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-akka-quickstart-scala-build-runtime-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-akka-quickstart-scala-build-runtime-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-akka-quickstart-scala-build-runtime.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-akka-quickstart-scala-build-runtime.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-akka-quickstart-scala-build-scala-tool.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-akka-quickstart-scala-build-scala-tool.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-akka-quickstart-scala-build-sources.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-akka-quickstart-scala-build-sources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-akka-quickstart-scala-build-test-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-akka-quickstart-scala-build-test-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-akka-quickstart-scala-build-test.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-akka-quickstart-scala-build-test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/$global/ivyConfiguration/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/local_application.conf" afterPath="$PROJECT_DIR$/src/main/resources/local_application.conf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/cyclon/GlobalActor.scala" afterPath="$PROJECT_DIR$/src/main/scala/cyclon/GlobalActor.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/cyclon/GossipActor.scala" afterPath="$PROJECT_DIR$/src/main/scala/cyclon/GossipActor.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/cyclon/LocalActor.scala" afterPath="$PROJECT_DIR$/src/main/scala/cyclon/LocalActor.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/cyclon/TestActor.scala" afterPath="$PROJECT_DIR$/src/main/scala/cyclon/TestActor.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/local_application.conf" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/local_application.conf" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -115,8 +67,8 @@
       <file leaf-file-name="local_application.conf" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/local_application.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+            <state relative-caret-position="68">
+              <caret line="4" column="44" lean-forward="false" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -125,26 +77,26 @@
       <file leaf-file-name="LocalActor.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/cyclon/LocalActor.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="87" column="22" lean-forward="false" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
+            <state relative-caret-position="459">
+              <caret line="30" column="26" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
               <folding>
                 <element signature="e#16#35#0" expanded="true" />
-                <element signature="e#451#470#0" expanded="true" />
-                <element signature="e#1054#1240#0" expanded="false" />
-                <element signature="e#1244#2396#0" expanded="false" />
+                <element signature="e#437#456#0" expanded="true" />
+                <element signature="e#1039#1225#0" expanded="false" />
+                <element signature="e#1229#2381#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GossipActor.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GossipActor.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/cyclon/GossipActor.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="425">
+              <caret line="52" column="38" lean-forward="true" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
               <folding>
                 <element signature="e#16#35#0" expanded="true" />
-                <element signature="e#256#276#0" expanded="true" />
+                <element signature="e#294#314#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -153,24 +105,23 @@
       <file leaf-file-name="TestActor.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/cyclon/TestActor.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+            <state relative-caret-position="-70">
+              <caret line="5" column="59" lean-forward="false" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
               <folding>
                 <element signature="e#16#58#0" expanded="true" />
-                <element signature="e#209#227#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GlobalActor.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GlobalActor.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/cyclon/GlobalActor.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="581">
-              <caret line="59" column="14" lean-forward="false" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
+            <state relative-caret-position="440">
+              <caret line="56" column="19" lean-forward="false" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
               <folding>
                 <element signature="e#16#58#0" expanded="true" />
-                <element signature="e#288#308#0" expanded="true" />
+                <element signature="e#223#243#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -194,6 +145,8 @@
       <find>mysample</find>
       <find>Broa~~</find>
       <find>Broa</find>
+      <find>myname</find>
+      <find>name</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -221,11 +174,11 @@
         <option value="$PROJECT_DIR$/src/main/scala/cyclon/Cyclon.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/lightbend/akka/sample/AkkaQuickstart.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/lightbend/akka/sample/AkkaQuickstartSpec.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/cyclon/TestActor.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/cyclon/GossipActor.scala" />
         <option value="$PROJECT_DIR$/src/main/resources/local_application.conf" />
         <option value="$PROJECT_DIR$/src/main/scala/cyclon/LocalActor.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/cyclon/GlobalActor.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/cyclon/TestActor.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/cyclon/GossipActor.scala" />
       </list>
     </option>
   </component>
@@ -273,10 +226,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -322,38 +272,20 @@
               <item name="scala" type="462c0819:PsiDirectoryNode" />
               <item name="cyclon" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ASD - TP1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="akka-quickstart-scala" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ASD - TP1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="akka-quickstart-scala" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ASD - TP1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="akka-quickstart-scala" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -632,7 +564,9 @@
       <workItem from="1509312863462" duration="71000" />
       <workItem from="1509312954766" duration="296000" />
       <workItem from="1509313274681" duration="922000" />
-      <workItem from="1509314398681" duration="11022000" />
+      <workItem from="1509314398681" duration="11561000" />
+      <workItem from="1509359751045" duration="7000" />
+      <workItem from="1509359864151" duration="10672000" />
     </task>
     <task id="LOCAL-00001" summary="as">
       <created>1509315546138</created>
@@ -641,7 +575,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509315546138</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="básicos">
+      <created>1509327271875</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1509327271875</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -650,15 +591,14 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75724000" />
+    <option name="totallyTimeSpent" value="86942000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47334754" sideWeight="0.428125" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32622603" sideWeight="0.428125" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -666,14 +606,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.61182797" sideWeight="0.571875" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36993605" sideWeight="0.6" order="1" side_tool="false" content_ui="tabs" x="1236" y="91" width="687" height="476" />
+      <window_info id="Run" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2707889" sideWeight="0.6" order="1" side_tool="false" content_ui="tabs" x="1236" y="91" width="687" height="476" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15511727" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14072494" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5763441" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -685,6 +624,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5763441" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -696,7 +636,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="as" />
-    <option name="LAST_COMMIT_MESSAGE" value="as" />
+    <MESSAGE value="básicos" />
+    <option name="LAST_COMMIT_MESSAGE" value="básicos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -831,64 +772,64 @@
     <entry file="file://$PROJECT_DIR$/src/main/scala/cyclon/RemoteActor.scala" />
     <entry file="file://$PROJECT_DIR$/src/main/scala/cyclon/Cyclon.scala" />
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/lightbend/akka/sample/AkkaQuickstart.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/cyclon/Global.scala" />
     <entry file="file://$PROJECT_DIR$/src/test/scala/com/lightbend/akka/sample/AkkaQuickstartSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
+        <state relative-caret-position="425">
           <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/cyclon/Global.scala" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/local_application.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/cyclon/GlobalActor.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="59" column="14" lean-forward="false" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
-          <folding>
-            <element signature="e#16#58#0" expanded="true" />
-            <element signature="e#288#308#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/cyclon/TestActor.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+        <state relative-caret-position="-70">
+          <caret line="5" column="59" lean-forward="false" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
           <folding>
             <element signature="e#16#58#0" expanded="true" />
-            <element signature="e#209#227#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/local_application.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="44" lean-forward="false" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/cyclon/LocalActor.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="87" column="22" lean-forward="false" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
+        <state relative-caret-position="459">
+          <caret line="30" column="26" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
           <folding>
             <element signature="e#16#35#0" expanded="true" />
-            <element signature="e#451#470#0" expanded="true" />
-            <element signature="e#1054#1240#0" expanded="false" />
-            <element signature="e#1244#2396#0" expanded="false" />
+            <element signature="e#437#456#0" expanded="true" />
+            <element signature="e#1039#1225#0" expanded="false" />
+            <element signature="e#1229#2381#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/cyclon/GossipActor.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="425">
+          <caret line="52" column="38" lean-forward="true" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
           <folding>
             <element signature="e#16#35#0" expanded="true" />
-            <element signature="e#256#276#0" expanded="true" />
+            <element signature="e#294#314#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/cyclon/GlobalActor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="56" column="19" lean-forward="false" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
+          <folding>
+            <element signature="e#16#58#0" expanded="true" />
+            <element signature="e#223#243#0" expanded="true" />
           </folding>
         </state>
       </provider>

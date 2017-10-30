@@ -1,12 +1,10 @@
 package cyclon
 
 import akka.actor.{Actor, ActorRef, Props}
-import cyclon.GlobalActor.Broadcast
-import cyclon.LocalActor.{Neighbor}
-import scala.concurrent.duration._
-import com.typesafe.config.ConfigFactory
+import cyclon.LocalActor.Neighbor
 
-import scala.util.Random
+import scala.concurrent.duration._
+import cyclon.TestActor.TestGlobalView
 
 class GlobalActor(gossip: ActorRef) extends Actor{
 
@@ -54,10 +52,15 @@ class GlobalActor(gossip: ActorRef) extends Actor{
 
     case ReceiveGlobal(view) =>
       mergeViews(view)
-      view.foreach(l => println("View",l.actor.pathString))
-      println()
-      globalView.foreach(l => println("GlobalNeighs",l.actor.pathString))
-      println()
+
+      globalView.foreach(l =>{
+        if(l.age>10)
+          globalView = globalView.filter(!_.actor.pathString.equals(l.actor.pathString))
+        l.age += 1
+      })
+
+    case GetGlobalView =>
+      sender() ! TestGlobalView(globalView)
   }
 }
 
@@ -66,6 +69,7 @@ object GlobalActor{
   def props(cyclon: ActorRef): Props =
     Props(new GlobalActor(cyclon))
 
+  case object GetGlobalView
   case object Broadcast
   final case class ReceiveGlobal(view: List[Neighbor])
 
