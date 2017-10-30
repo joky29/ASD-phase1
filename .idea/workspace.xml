@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee705aa1-da23-4d56-86be-37867b7f2603" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/remote_application.conf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/scala/com/lightbend/akka/sample/AkkaQuickstartSpec.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/remote_application.conf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/test-classes/com/lightbend/akka/sample/AkkaQuickstartSpec.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/GossipActor$$anonfun$receive$1.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/GossipActor$$anonfun$receive$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/GossipActor$.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/GossipActor$.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/GossipActor$AntiEntropy$.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/GossipActor$AntiEntropy$.class" />
@@ -27,11 +23,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/LocalActor$getNeighbors$.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/LocalActor$getNeighbors$.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/LocalActor.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/cyclon/LocalActor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/local_application.conf" afterPath="$PROJECT_DIR$/src/main/resources/local_application.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/cyclon/GlobalActor.scala" afterPath="$PROJECT_DIR$/src/main/scala/cyclon/GlobalActor.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/cyclon/GossipActor.scala" afterPath="$PROJECT_DIR$/src/main/scala/cyclon/GossipActor.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/cyclon/LocalActor.scala" afterPath="$PROJECT_DIR$/src/main/scala/cyclon/LocalActor.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/cyclon/TestActor.scala" afterPath="$PROJECT_DIR$/src/main/scala/cyclon/TestActor.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/local_application.conf" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/local_application.conf" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -566,7 +557,7 @@
       <workItem from="1509313274681" duration="922000" />
       <workItem from="1509314398681" duration="11561000" />
       <workItem from="1509359751045" duration="7000" />
-      <workItem from="1509359864151" duration="10672000" />
+      <workItem from="1509359864151" duration="10689000" />
     </task>
     <task id="LOCAL-00001" summary="as">
       <created>1509315546138</created>
@@ -582,7 +573,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509327271875</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="maybe final">
+      <created>1509381224955</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1509381224955</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -591,7 +589,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86942000" />
+    <option name="totallyTimeSpent" value="86959000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -637,7 +635,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="as" />
     <MESSAGE value="básicos" />
-    <option name="LAST_COMMIT_MESSAGE" value="básicos" />
+    <MESSAGE value="maybe final" />
+    <option name="LAST_COMMIT_MESSAGE" value="maybe final" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
